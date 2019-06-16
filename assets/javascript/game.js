@@ -16,7 +16,7 @@ var losses = 0;
 //randomize number for the crystals 1-12
 newGame = function (e) {
     while (crystalVals.length < 4) {
-      var number = Math.floor(Math.random() * 13) + 1;
+      var number = Math.floor(Math.random() * 12) + 1;
       if ($.inArray(number, crystalVals) == -1) {
         crystalVals.push(number);
         // $("#random-number").text(crystalVals);
@@ -28,6 +28,7 @@ newGame = function (e) {
       crystal4 = crystalVals[3];
     }
     randomNum = Math.floor(Math.random() * 101) + 19;
+    $("#random-number").text(randomNum);
   }
 
   newGame();
@@ -39,10 +40,23 @@ newGame = function (e) {
   console.log("Score: " + score);
 
   $("#crystal1").on("click", function (e) {
-    //   console.log("you clicked crystal1");
     score = score + crystal1;
     console.log("Score: " + score);
+  });
 
+  $("#crystal2").on("click", function (e) {
+    score = score + crystal2;
+    console.log("Score: " + score);
+  });
+
+  $("#crystal3").on("click", function (e) {
+    score = score + crystal3;
+    console.log("Score: " + score);
+  });
+
+  $("#crystal4").on("click", function (e) {
+    score = score + crystal4;
+    console.log("Score: " + score);
   });
 
   if (score === randomNum) {
