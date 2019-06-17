@@ -11,16 +11,12 @@ var wins = 0;
 var losses = 0;
 var gameOver = false;
 
-//randomize number for goal 19-120
-
-
-//randomize number for the crystals 1-12
+//randomize number for the crystals 1-12 and number for goal 19-120
 newGame = function (e) {
     while (crystalVals.length < 4) {
         var number = Math.floor(Math.random() * 12) + 1;
         if ($.inArray(number, crystalVals) == -1) {
             crystalVals.push(number);
-            // $("#random-number").text(crystalVals);
             console.log(crystalVals);
         }
         crystal1 = crystalVals[0];
@@ -29,7 +25,11 @@ newGame = function (e) {
         crystal4 = crystalVals[3];
     }
     randomNum = Math.floor(Math.random() * 101) + 19;
+    score = 0;
+    $("#score").text(score);
     $("#random-number").text(randomNum);
+    $("#losses").text("Losses: " + losses);
+    $("#wins").text("Wins: " + wins);
 }
 
 newGame();
@@ -44,8 +44,16 @@ updateGame = function (e) {
     $("#your-score").text(score);
     if (score === randomNum) {
         console.log("You win!");
+        wins++;
+        $("#wins").text("Wins: " + wins);
+        newGame();
     } else if (score > randomNum) {
         console.log("you lose!");
+        losses++;
+        $("#losses").text("Losses: " + losses);
+        newGame();
+    } else {
+        
     }
 }
 
