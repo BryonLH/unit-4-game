@@ -1,0 +1,42 @@
+/*
+Available Fonts
+font-family: 'Swanky and Moo Moo', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Pirata One', cursive;
+*/
+
+@font-face {
+    font-family: "GooniesFont";
+    src: url("../fonts/Goonies.ttf");
+    }
+
+body {
+    background-image: url("../images/goonies-background.jpg");
+    color:white;
+}
+
+.header {
+    font-family: "GooniesFont";
+    color:rgb(163, 163, 53);
+    font-size:80px;
+    text-align:center;
+    margin-top:30px;
+}
+
+#crystal1 {
+    color:red;
+}
+
+#crystal2 {
+    color:green;
+}
+
+#crystal3 {
+    color:blue;
+}
+
+#crystal4 {
+    color:purple;
+}
+
