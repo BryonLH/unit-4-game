@@ -27,9 +27,10 @@ newGame = function (e) {
     randomNum = Math.floor(Math.random() * 101) + 19;
     score = 0;
     $("#score").text(score);
-    $("#random-number").text(randomNum);
+    $("#random-number").html("Target Gem Power: <span class='number-highlight'>" + randomNum + "</span>");
     $("#losses").text("Losses: " + losses);
     $("#wins").text("Wins: " + wins);
+    $("#your-score").html("Your gem's magic power is <span class='number-highlight'>" + score + "</span>");
 }
 
 newGame();
@@ -41,7 +42,7 @@ console.log(randomNum);
 console.log("Score: " + score);
 
 updateGame = function (e) {
-    $("#your-score").text(score);
+    $("#your-score").html("Your gem's magic power is <span class='number-highlight'>" + score + "</span>");
     if (score === randomNum) {
         console.log("You win!");
         wins++;

@@ -26,17 +26,55 @@ body {
 
 #crystal1 {
     color:red;
+    text-align:center;
 }
 
 #crystal2 {
     color:green;
+    text-align:center;
 }
 
 #crystal3 {
     color:blue;
+    text-align:center;
 }
 
 #crystal4 {
     color:purple;
+    text-align:center;
+}
+
+.game-description {
+    margin-top:30px;
+    text-align:center;
+    font-family: 'Pirata One', cursive;
+    font-size:30px;
+}
+
+.gem-power {
+    margin-top:30px;
+    text-align:center;
+    font-family: 'Pirata One', cursive;
+    font-size:60px;
+}
+
+.number-goal {
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:center;
+    font-family: 'Pirata One', cursive;
+    font-size:55px;
+}
+
+.wins-losses {
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:center;
+    font-family: 'Pirata One', cursive;
+    font-size:30px;
+}
+
+.number-highlight {
+    color:yellow;
 }
 
